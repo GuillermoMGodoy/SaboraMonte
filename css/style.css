@@ -90,7 +90,7 @@ nav ul li a.active {
 /* Hero Section */
 .hero {
 .hero {
-    background: linear-gradient(rgba(42, 42, 42, 0.7), rgba(42, 42, 42, 0.8)), url('../images/Background_image2.png');
+    background: linear-gradient(rgba(42, 42, 42, 0.7), rgba(42, 42, 42, 0.8)), url (url('../images/Background_image2.png')) ;
     background-size: cover;
     background-position: center;
     color: white;
