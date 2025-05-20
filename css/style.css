@@ -1,0 +1,429 @@
+:root {
+    --dark-bg: #2A2A2A;
+    --primary-green: #4A4F3C;
+    --light-green: #D8E2C8;
+    --text-on-light: #2A2A2A;
+    --text-on-dark: #F0F0F0;
+    --font-primary: 'Montserrat', sans-serif;
+    --font-headings: 'Playfair Display', serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-primary);
+    background-color: var(--dark-bg);
+    color: var(--text-on-dark);
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* Header */
+header {
+    background-color: var(--primary-green);
+    color: var(--text-on-dark);
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#logo {
+    height: 100px;
+    /* Ajusta según el tamaño de tu logo */
+    width: auto;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 25px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--text-on-dark);
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    color: var(--light-green);
+}
+
+#mobile-menu-button {
+    display: none;
+    /* Oculto por defecto, se muestra en móvil */
+    background: none;
+    border: none;
+    color: var(--text-on-dark);
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(rgba(42, 42, 42, 0.7), rgba(42, 42, 42, 0.8)), url('/images/Background_image2.png');
+    background-size: cover;
+    /* Hace que la imagen cubra todo el área, puede recortar partes */
+    background-position: center;
+    /* Centra la imagen */
+    color: white;
+    height: 100vh;
+    /* Hace que la sección ocupe toda la altura de la ventana */
+    display: flex;
+    align-items: center;
+    text-align: center;
+    padding-top: 80px;
+}
+
+.hero h1 {
+    font-family: var(--font-headings);
+    font-size: 4rem;
+    margin-bottom: 0.5rem;
+    color: var(--light-green);
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.btn {
+    display: inline-block;
+    background-color: var(--light-green);
+    color: var(--text-on-light);
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    border: 2px solid var(--primary-green);
+}
+
+.btn:hover {
+    background-color: var(--primary-green);
+    color: var(--light-green);
+    transform: translateY(-2px);
+}
+
+/* General Section Styling */
+section {
+    padding: 80px 0;
+}
+
+section:nth-child(even) {
+    /* Alternar colores de fondo para secciones */
+    background-color: var(--primary-green);
+    /* El verde oscuro para las secciones "Nosotros" y "Contacto" */
+    color: var(--text-on-dark);
+}
+
+section:nth-child(even) h2 {
+    color: var(--light-green);
+}
+
+section:nth-child(odd):not(.hero) {
+    /* El verde claro para la sección de productos */
+    background-color: var(--light-green);
+    color: var(--text-on-light);
+}
+
+section:nth-child(odd):not(.hero) h2 {
+    color: var(--primary-green);
+}
+
+
+h2 {
+    font-family: var(--font-headings);
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+h2::after {
+    /* Pequeño subrayado decorativo */
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: currentColor;
+    /* Usa el color del texto del h2 */
+    margin: 10px auto 0;
+}
+
+
+/* Product Categories */
+.categories-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.category-card {
+    background-color: #ffffff;
+    /* Fondo blanco para las tarjetas */
+    color: var(--text-on-light);
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-left: 5px solid var(--primary-green);
+}
+
+.category-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.category-card h3 {
+    font-family: var(--font-headings);
+    color: var(--primary-green);
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+}
+
+.category-card.el-brocal {
+    /* Estilo especial para El Brocal */
+    border-left-color: #a0522d;
+    /* Un color tierra, por ejemplo */
+}
+
+.category-card.el-brocal h3 {
+    color: #a0522d;
+}
+
+/* About Us */
+.about-us {
+    text-align: center;
+}
+
+.about-us p {
+    max-width: 800px;
+    margin: 0 auto 1.5rem auto;
+    font-size: 1.1rem;
+}
+
+/* Contact Section */
+.contact-section {
+    background-color: var(--primary-green);
+    /* Fondo verde oscuro para esta sección */
+    color: var(--text-on-dark);
+}
+
+.contact-section h2 {
+    color: var(--light-green);
+}
+
+#contactForm {
+    max-width: 600px;
+    margin: 0 auto 40px auto;
+    background-color: rgba(255, 255, 255, 0.05);
+    /* Sutilmente más claro */
+    padding: 30px;
+    border-radius: 8px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: var(--light-green);
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid var(--light-green);
+    background-color: var(--dark-bg);
+    color: var(--text-on-dark);
+    font-family: var(--font-primary);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #fff;
+    /* Un blanco más brillante al enfocar */
+    box-shadow: 0 0 5px rgba(216, 226, 200, 0.5);
+}
+
+.contact-section .btn {
+    /* Estilo del botón en la sección de contacto */
+    background-color: var(--light-green);
+    color: var(--text-on-light);
+    border: 2px solid var(--primary-green);
+    /* Borde más oscuro */
+}
+
+.contact-section .btn:hover {
+    background-color: var(--primary-green);
+    color: var(--light-green);
+    border-color: var(--light-green);
+}
+
+.contact-info {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.contact-info p {
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+.contact-info strong {
+    color: var(--light-green);
+}
+
+/* Footer */
+footer {
+    background-color: var(--dark-bg);
+    color: var(--primary-green);
+    text-align: center;
+    padding: 2rem 0;
+    border-top: 1px solid var(--primary-green);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: row;
+        /* Asegura que logo y botón estén en línea */
+        justify-content: space-between;
+    }
+
+    nav {
+        display: none;
+        /* Oculta el nav principal */
+        position: absolute;
+        top: 80px;
+        /* Debajo del header */
+        left: 0;
+        width: 100%;
+        background-color: var(--primary-green);
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    nav.active {
+        /* Clase para mostrar el menú en móvil */
+        display: block;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 15px 0;
+    }
+
+    #mobile-menu-button {
+        display: block;
+        /* Muestra el botón de hamburguesa */
+    }
+
+    .hero h1 {
+        font-size: 2.8rem;
+    }
+
+    .hero p {
+        font-size: 1.2rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    .categories-grid {
+        grid-template-columns: 1fr;
+        /* Una columna en móviles */
+    }
+}
+
+/* WhatsApp Floating Action Button (FAB) */
+#whatsapp-fab {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 30px;
+    right: 30px;
+    background-color: #25D366;
+    /* Color oficial de WhatsApp */
+    color: #FFF;
+    /* Color del icono (si es SVG y usa currentColor) o del texto si pones texto */
+    border-radius: 50%;
+    /* Para hacerlo circular */
+    text-align: center;
+    font-size: 30px;
+    /* Tamaño del icono (ajustar si es necesario) */
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    /* Para que esté por encima de otros elementos */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    /* Quitar subrayado del enlace */
+    transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
+}
+
+#whatsapp-fab:hover {
+    background-color: #128C7E;
+    /* Un verde más oscuro al pasar el mouse */
+    transform: scale(1.1);
+    /* Un pequeño efecto de zoom */
+}
+
+/* Estilos para el icono SVG dentro del botón */
+#whatsapp-fab svg {
+    width: 32px;
+    /* Ajusta el tamaño del SVG */
+    height: 32px;
+    fill: #FFFFFF;
+    /* Asegura que el SVG sea blanco */
+}
+
+/* Estilos para la imagen PNG dentro del botón (si usas Opción B) */
+/*
+#whatsapp-fab img {
+    width: 35px;
+    height: 35px;
+    margin-top: 12px;
+}
+*/

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sabor a Monte - Distribuidora de Alimentos</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <img src="/images/logo.png" alt="Sabor a Monte Logo" id="logo">
+            <nav>
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#productos">Productos</a></li>
+                    <li><a href="#nosotros">Nosotros</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+            <button id="mobile-menu-button" aria-label="Abrir menú">☰</button>
+        </div>
+    </header>
+
+    <main>
+        <section id="inicio" class="hero">
+            <div class="container">
+                <h1>Sabor a Monte</h1>
+                <p>Calidad y frescura en tu mesa</p>
+                <a href="#productos" class="btn">Ver Nuestros Productos</a>
+            </div>
+        </section>
+
+        <section id="productos" class="product-categories">
+            <div class="container">
+                <h2>Nuestras Categorías</h2>
+                <div class="categories-grid">
+                    <div class="category-card">
+                        <h3>ALMACÉN</h3>
+                        <p>Productos esenciales para tu despensa.</p>
+                    </div>
+                    <div class="category-card">
+                        <h3>HONGOS</h3>
+                        <p>Variedad de hongos frescos y secos.</p>
+                    </div>
+                    <div class="category-card">
+                        <h3>FRUTAS CONGELADAS</h3>
+                        <p>Frutas seleccionadas, listas para usar.</p>
+                    </div>
+                    <div class="category-card">
+                        <h3>JUGOS</h3>
+                        <p>Jugos naturales y concentrados.</p>
+                    </div>
+                    <div class="category-card">
+                        <h3>LÁCTEOS</h3>
+                        <p>Productos lácteos de alta calidad.</p>
+                    </div>
+                    <div class="category-card el-brocal">
+                        <h3>PRODUCTOS "EL BROCAL"</h3>
+                        <p>Especialidades de nuestra marca destacada.</p>
+                    </div>
+                    <div class="category-card">
+                        <h3>VERDURAS IQF</h3>
+                        <p>Verduras congeladas individualmente.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="nosotros" class="about-us">
+            <div class="container">
+                <h2>Sobre Nosotros</h2>
+                <p>En Sabor a Monte, nos dedicamos a la distribución de alimentos de la más alta calidad, seleccionando
+                    cuidadosamente cada producto para llevar lo mejor del campo a nuestros clientes. Nuestro compromiso
+                    es con la frescura, el sabor auténtico y un servicio excepcional.</p>
+                <p>Con años de experiencia en el sector, entendemos las necesidades de chefs, restaurantes y
+                    consumidores finales, ofreciendo soluciones personalizadas y una logística eficiente.</p>
+            </div>
+        </section>
+
+        <section id="contacto" class="contact-section">
+            <div class="container">
+                <h2>Contáctanos</h2>
+                <p>¿Interesado en nuestros productos? ¡Nos encantaría saber de ti!</p>
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Nombre:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Mensaje:</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn">Enviar Mensaje</button>
+                </form>
+                <div class="contact-info">
+                    <p><strong>Teléfono:</strong> +54 (123) 456-7890</p>
+                    <p><strong>Email:</strong> info@saboramonte.com</p>
+                    <p><strong>Dirección:</strong> Calle Falsa 123, Ciudad, Provincia</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2023 Sabor a Monte. Todos los derechos reservados.</p>
+            <p>Diseñado con ♥</p>
+        </div>
+    </footer>
+    <!-- Botón Flotante de WhatsApp -->
+    <a href="https://wa.me/91124779640?text=Hola%2C%20estoy%20interesado%20en%20sus%20productos." id="whatsapp-fab"
+        target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp">
+        <!-- Opción A: SVG (Pega el código SVG aquí) -->
+        <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+            <path
+                d="M16 0A16 16 0 0 0 0 16a16 16 0 0 0 4.688 11.125L3.063 32l5.281-1.625A15.938 15.938 0 0 0 16 32a16 16 0 0 0 16-16A16 16 0 0 0 16 0zm0 29.625a13.584 13.584 0 0 1-6.97-1.875l-.5-.281-5.187 1.594 1.625-5.062-.313-.532A13.625 13.625 0 1 1 16 29.625zm7.313-9.031c-.375-.188-2.25-.938-2.594-1.063s-.594-.188-.844.188c-.25.375-.969 1.063-1.188 1.281s-.438.25-.813.094c-1.594-.625-2.969-1.344-4.125-2.875s-1.594-2.313-1.781-2.688c-.188-.375 0-.594.156-.781.156-.156.375-.375.563-.563.188-.188.25-.313.375-.531.125-.219.063-.406-.031-.594s-.844-2.031-1.156-2.781c-.281-.719-.594-.625-.813-.625s-.469-.031-.719-.031c-.25 0-.656.094-1 .469s-1.375 1.344-1.375 3.281c0 1.938 1.406 3.813 1.594 4.063s2.75 4.188 6.656 5.875c3.906 1.688 3.906 1.125 4.625 1.063s2.25-.906 2.563-1.813c.313-.906.313-1.688.219-1.875s-.375-.281-.75-.469z" />
+        </svg>
+
+    </a>
+    <script src="/js/script.js"></script>
+</body>
+
+</html>
