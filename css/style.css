@@ -89,17 +89,18 @@ nav ul li a.active {
 
 /* Hero Section */
 .hero {
-.hero {
-    background: linear-gradient(rgba(42, 42, 42, 0.7), rgba(42, 42, 42, 0.8)), url (url('../images/Background_image2.png')) ;
+    background: linear-gradient(rgba(42, 42, 42, 0.7), rgba(42, 42, 42, 0.8)), url(/images/Background_image2.png);
     background-size: cover;
+    /* Hace que la imagen cubra todo el área, puede recortar partes */
     background-position: center;
+    /* Centra la imagen */
     color: white;
     height: 100vh;
+    /* Hace que la sección ocupe toda la altura de la ventana */
     display: flex;
     align-items: center;
     text-align: center;
-    padding-top: 80px; /* No olvides esto si tu header es fijo */
-}
+    padding-top: 80px;
 }
 
 .hero h1 {
